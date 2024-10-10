@@ -1,125 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Yandry Daniel Romero Carrión</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #e0e0e0;
-            background-color: #121212;
-            margin: 0;
-            padding: 0;
-        }
-        a {
-            color: #e0e0e0;
-            text-decoration: none;
-        }
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        /* Header */
-        header {
-            padding: 1rem 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        .nav-links a:hover {
-            color: #ffa726;
-        }
-        /* Hero Section */
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 4rem 0;
-            background-image: url('your-image-url.jpg'); /* Añade una imagen de fondo si deseas */
-            background-size: cover;
-            background-blend-mode: overlay;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #ffa726;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 2rem;
-            line-height: 1.6;
-        }
-        /* Icon Sections */
-        .icon-section {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            padding: 2rem 0;
-        }
-        .icon {
-            text-align: center;
-        }
-        .icon i {
-            font-size: 2.5rem;
-            color: #ffa726;
-        }
-        .icon p {
-            margin-top: 0.5rem;
-            font-size: 1rem;
-        }
-        /* About, Skills, Certificates, Contact Sections */
-        section {
-            padding: 3rem 0;
-            border-top: 1px solid #333;
-        }
-        h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #ffa726;
-        }
-        .section-content {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        .content-box {
-            flex: 1;
-            padding: 1.5rem;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .content-box h4 {
-            margin-bottom: 0.5rem;
-        }
-        .contact-info a {
-            display: block;
-            margin: 0.5rem 0;
-        }
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 0;
-            color: #777;
-            background-color: #1a1a1a;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio de Yandry Daniel Romero Carrión</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            /* General Styles */
+            body {
+                font-family: 'Arial', sans-serif;
+                color: #e0e0e0;
+                background-color: #121212;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            a {
+                color: #e0e0e0;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            a:hover {
+                color: #ffa726;
+            }
+            .container {
+                width: 85%;
+                max-width: 1200px;
+                margin: auto;
+            }
+            /* Header */
+            header {
+                padding: 1rem 0;
+                text-align: center;
+                opacity: 0;
+                transform: translateY(-30px);
+                animation: fadeIn 1s ease forwards;
+            }
+            header h1 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #fff;
+            }
+            .nav-links {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+            /* Hero Section */
+            .hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 4rem 0;
+                background-image: url('your-image-url.jpg');
+                background-size: cover;
+                background-blend-mode: overlay;
+                background-color: rgba(0, 0, 0, 0.6);
+                animation: fadeIn 1.5s ease forwards;
+                opacity: 0;
+            }
+            .hero h2 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                color: #ffa726;
+                animation: slideUp 1.5s ease forwards;
+                opacity: 0;
+            }
+            .hero p {
+                font-size: 1.2rem;
+                max-width: 600px;
+                margin-bottom: 2rem;
+                line-height: 1.6;
+                opacity: 0;
+                animation: fadeIn 2s ease forwards;
+            }
+            /* Icon Sections */
+            .icon-section {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+                padding: 2rem 0;
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeInUp 1.5s ease forwards;
+            }
+            .icon {
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+            .icon:hover {
+                transform: scale(1.1);
+            }
+            .icon i {
+                font-size: 2.5rem;
+                color: #ffa726;
+            }
+            .icon p {
+                margin-top: 0.5rem;
+                font-size: 1rem;
+            }
+            /* About, Skills, Certificates, Contact Sections */
+            section {
+                padding: 3rem 0;
+                border-top: 1px solid #333;
+                opacity: 0;
+                animation: fadeIn 1.5s ease forwards;
+            }
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                color: #ffa726;
+                opacity: 0;
+                animation: fadeIn 2s ease forwards;
+            }
+            .content-box {
+                flex: 1;
+                padding: 1.5rem;
+                background-color: #1e1e1e;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .content-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            }
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 2rem 0;
+                color: #777;
+                background-color: #1a1a1a;
+                opacity: 0;
+                animation: fadeIn 3s ease forwards;
+            }
+            /* Keyframes for animations */
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes slideUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes fadeInUp {
+                0% {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Estilos para la sección Sobre Mí */
+            .about-content {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+            .profile-photo img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+            }
+            .profile-photo img:hover {
+                transform: scale(1.1);
+            }
+            .about-text {
+                max-width: 600px;
+                line-height: 1.6;
+            }
+
+        </style>
+    </head>
 <body>
     <header>
         <h1>Yandry Daniel Romero Carrión</h1>
@@ -140,23 +207,61 @@
     <section id="about">
         <div class="container">
             <h3>Sobre Mí</h3>
-            <p>Soy un desarrollador de software comprometido con mi trabajo y motivado por los desafíos tecnológicos. Me especializo en crear y mantener aplicaciones sólidas y eficientes, utilizando tecnologías como Flutter para aplicaciones multiplataforma y Django como backend. Tengo experiencia en análisis de datos para indicadores de producción, soporte a usuarios y mantenimiento de la plataforma de Escritorio en C++.</p>
-            <p>Además, participo activamente en el mantenimiento de dashboards empresariales con JavaScript y HTML, y cuento con conocimientos en Java y Angular. Manejo bases de datos relacionales y no relacionales y gestiono el despliegue y la disponibilidad de las aplicaciones en los servidores. Mi enfoque es garantizar que cada proyecto alcance sus objetivos y se mantenga siempre operativo.</p>
+            <div class="about-content">
+                <div class="profile-photo">
+                    <img src="https://media.licdn.com/dms/image/v2/C4E03AQFWeO6V02ghpA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1641781070758?e=1733961600&v=beta&t=q28DvO5oONB-rSAOoLj4fRdwDzAkS8H39r-4jzCDE4o" alt="Foto de perfil de Yandry Daniel Romero Carrión">
+                </div>
+                <div class="about-text">
+                    <p>Soy un desarrollador de software comprometido con mi trabajo y motivado por los desafíos tecnológicos. Me especializo en crear y mantener aplicaciones sólidas y eficientes, utilizando tecnologías como Flutter para aplicaciones multiplataforma y Django como backend. También tengo experiencia en análisis de datos para indicadores de producción, soporte a usuarios y mantenimiento de la plataforma de escritorio en C++.</p>
+                    <p><strong>Formación Académica:</strong></p>
+                    <ul class="education-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>Maestría en Gestión de Proyectos</strong></span><br>
+                            <span class="education-details">Mar. 2024 - Act. | EIDHI UNIVERSITY</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-university"></i>
+                            <span><strong>Ingeniería en Ciencias de la Computación</strong></span><br>
+                            <span class="education-details">Sept. 2016 - Feb. 2022 | Universidad Politécnica Salesiana</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+     
     
 
     <section id="skills">
         <div class="container">
             <h3>Habilidades</h3>
             <div class="icon-section">
+                <!-- Desarrollo Web -->
                 <div class="icon"><i class="fas fa-code"></i><p>Desarrollo Web</p></div>
+                <div class="icon"><i class="fas fa-desktop"></i><p>FrontEnd</p></div>
+                <div class="icon"><i class="fas fa-server"></i><p>BackEnd</p></div>
+                <div class="icon"><i class="fab fa-angular"></i><p>Angular</p></div>
+                
+                <!-- Desarrollo de Aplicaciones -->
                 <div class="icon"><i class="fas fa-mobile-alt"></i><p>Flutter</p></div>
+                <div class="icon"><i class="fab fa-java"></i><p>Java</p></div>
+                <div class="icon"><i class="fab fa-python"></i><p>Python</p></div>
+                <div class="icon"><i class="fas fa-cube"></i><p>C++</p></div>
+                
+                <!-- Gestión y Administración de Bases de Datos -->
                 <div class="icon"><i class="fas fa-database"></i><p>Base de Datos</p></div>
+                
+                <!-- Gestión de Proyectos -->
                 <div class="icon"><i class="fas fa-project-diagram"></i><p>Gestión de Proyectos</p></div>
+                
+                <!-- Despliegue y Administración de Servidores -->
+                <div class="icon"><i class="fas fa-users"></i><p>SCRUM</p></div>
             </div>
         </div>
     </section>
+    
+    
 
     <section id="experience">
         <div class="container">
@@ -165,7 +270,7 @@
                 <div class="content-box">
                     <h4>Tarpuq Cia. Ltda. - Ingeniero Innovación</h4>
                     <p>Agosto 2022 - Actualidad</p>
-                    <p>Responsabilidades: Desarrollo de aplicaciones, soporte a usuarios, manejo de proyectos y depsliegue de aplicativos.</p>
+                    <p>Responsabilidades: Desarrollo de aplicaciones, soporte a usuarios, manejo de proyectos y despliegue de aplicativos.</p>
                     <p>Flutter - Python - C++ - JS - BackEnd - JIRA - SCRUM</p>
                 </div>
                 <div class="content-box">
@@ -206,7 +311,7 @@
         <div class="container">
             <h3>Contacto</h3>
             <div class="contact-info">
-                <p>Email: <a href="mailto:yandry_1997@hotmail.com">yandry_1997@hotmail.com/a></p>
+                <p>Email: <a href="mailto:yandry_1997@hotmail.com">yandry_1997@hotmail.com</a></p>
                 <p>LinkedIn: <a href="https://www.linkedin.com/in/yandry-romero-963369101/" target="_blank">https://www.linkedin.com/in/yandry-romero-963369101/</a></p>
                 <p>Teléfono: <a href="https://wa.me/593987165649" target="_blank">WhatsApp - +593 987165649</a></p>
             </div>
